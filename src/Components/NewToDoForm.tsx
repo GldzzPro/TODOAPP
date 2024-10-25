@@ -1,7 +1,10 @@
 import { useState } from 'react';
 
+type Props = {
+  handelAddItems: (text : string) => void
+}
 
-export const NewToDOForm = (handelAddItems: (arg0: string) => void) => {
+export const NewToDOForm = ( { handelAddItems } : Props) => {
 
     
   const [itemAddForm, setItemAddForm] = useState('');
